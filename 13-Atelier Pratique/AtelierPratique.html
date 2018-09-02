@@ -14,41 +14,177 @@
             <link rel="stylesheet" href="assets/css/ap.css">
 </head>
 <body>
-    <div class="contaire-fluid">
+    <div class="contaire-fluid" >
        
-            <div class="row">
-               
-           <div class="col-2"></div>
-      
-            <div class="col-8">
-                 <img src="assets/img/logo.png" alt="">
-            <ul>
-                <li><a href="#">Mac</a></li>
-                <li><a href="#">iPad</a></li>
-                <li><a href="#">iPhone</a></li>
-                <li><a href="#">Watch</a></li>
-                <li><a href="#">TV</a></li>
-                <li><a href="#">Music</a></li>
-                <li><a href="#">Assistance</a></li>
-                <li><a href="#"><i class="fas fa-search"></i></a></li>
-                <li><a href="#"><i class="fas fa-lock"></i></a></li>
-            </ul>
-           </div>
-           <div class="col-2"></div>
-           </div>
-           
-            <div class="jumbotron" style="margin:auto">
-              
-               <img src="assets/img/menu/Accessoires.png" alt="">
-               <img src="assets/img/menu/Comparer.png" alt="">
-               <img src="assets/img/menu/iOs10.png" alt="">
-               <img src="assets/img/menu/iPhone6s.png" alt="">
-               <img src="assets/img/menu/iPhone7.png" alt="">
-               <img src="assets/img/menu/iPhoneSE.png" alt="">
-              
+            <nav class="navbar navbar-dark bg-dark">
+                    <nav class="navbar navbar-dark bg-dark mx-auto">
+                    <a class="navbar-brand" href="#">
+                      <img src="assets/img/logo.png" width="30" height="30" alt="">
+                    </a>
+                    <a class="navbar-brand" href="#">Mac</a>
+                    <a class="navbar-brand" href="#">iPad</a>
+                    <a class="navbar-brand" href="#">iPhone</a>
+                    <a class="navbar-brand" href="#">Watch</a>
+                    <a class="navbar-brand" href="#">TV</a>
+                    <a class="navbar-brand" href="#">Music</a>
+                    <a class="navbar-brand" href="#">Assistance</a>
+                    <a class="navbar-brand" href="#"><i class="fas fa-search"></i></a>
+                    <a class="navbar-brand" href="#"><i class="fas fa-lock"></i></a>
+                    </nav>
+                  </nav>
+                  <div class="row" style="background: rgb(27, 27, 27);">
+                      <div class="row" style="position: relative; left: 440px;">
+                        <img src="assets/img/menu/iPhone7.png" alt="..." class="img">
+
+                        <img src="assets/img/menu/iPhone6s.png" alt="..." class="img">
+
+                        <img src="assets/img/menu/iPhoneSE.png" alt="..." class="img">
+
+                        <img src="assets/img/menu/iOs10.png" alt="..." class="img">
+
+                        <img src="assets/img/menu/Accessoires.png" alt="..." class="img">
+
+                        <img src="assets/img/menu/Comparer.png" alt="..." class="img">
+                    </div>
+                  </div>
+
+
+                  <div class="row" style=" color: aliceblue">
+                      <div class="col" style="text-align: center">
+                      <p><h2>iPhone</h2> 
+                      
+                     <h1> Numéro 7</h1>
+                      
+                      <span style="color: blue">En savoir plus>>  Acheter></span>
+                      <br>
+                     <span style="font-size: 10px;"> Ou rendez-vous dès aujourd'hui dans un Apple store</span></p>
+                    </div>
+
+                  </div>
+
+
+
+                  <div class="row" style="background-color: #000;">
+                      <div class="col-md-8" style=" position: relative; left: 100px;">
+                        <img src="assets/img/hero_large.jpg" class="img-fluid" alt="Responsive image">
+                    </div>
+                  </div>
+
+                  <div class="row" style="background-color: #fff; ">
+                      <div class="col" style="position: relative; left: 200px;"><img src="assets/img/iPhone.png" alt=""></div>
+                      <div class="col-md-4" style="text-align: center; position: relative; right: 100px;">
+                          <p> <h3>Passez à l'iPhone 7.</h3>  
+                              <br>
+                              <br>
+                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae dignissimos quam, cumque explicabo modi incidunt officia beatae ipsa, fuga e
+                              <br>
+                              <br>
+                              <span style="color: blue">Comment ça marche ? ></span>
+                          </p>
+                      </div>
+                  </div>
+
+                  <div class="row" style="background-color: #000; color: #fff">
+                        <div class="col-md-12">
+                            <h1 class="text-center">Contactez-nous</h1>
+                        </div>        
             </div>
 
+           <div class="row">
+               <div class="col-md-6 mx-auto">
+                    <form id="contacts-nous">
+                            <div class="form-group">
+                                <label for=""></label>
+                              <input type="text" class="form-control" id="nomEtprenom" placeholder="Nom et Prenom">
+                            </div>
+
+
+                            <div class="row">
+                                    <div class="col">
+                                      <input type="email" class="form-control" placeholder="email" id="email">
+                                    </div>
+
+                                    <div class="col">
+                                      <input type="tel" class="form-control" id="tel" placeholder="Téléphone">
+                                    </div>
+                                  </div>
+
+
+                            <div class="form-group">
+                             <label for=""></label>
+                              <input type="text" class="form-control" id="sujet" placeholder="Sujet">
+                            </div>
+
+                            <div class="form-group">
+                                    <label for=""></label>
+                                    <textarea name="commentaire" id="commentaire" cols="70" rows="10" placeholder="Message" id="message"></textarea>
+                                   </div>
+
+
+                                   <div class="form-group mx-auto" style="position: relative; left: 250px;">
+                                        <button type="submit" class="btn btn-primary btn  mb-2">
+                                            Envoyer ma demande
+                                        </button>
+                                    </div>
+
+
+                          </form>
+               </div>
+           </div>
+
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+
+    <script>
+        // --Début de Jquery (DOM READY);
+    $(function(){
+
+            //--Valider l'email
+         function validateEmail(email) {
+            var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+        }//--------
+
+        // --valider le Numéro de Téléphone en FR
+        var validateTel = tel => {
+            var telReg = new RegExp("(0|\\+33|0033)[1-9][0-9]{8}");
+            return telReg.test(tel);
+        }//-----------------
+
+        //--Ecouter l'événement submit
+        $('#contacts-nous').submit(function(e){
+            //--Redriger 
+            e.preventDefault();
+
+            //--recuperation des valeurs INPUT
+            const nomEtprenom = $('nomEtprenom');
+            const email = $('email');
+            const tel = $('tel');
+            const sujet = $('sujet');
+            const message = $('message');
+            console.log('nomEtprenom');
+
+            if(nomEtprenom.val() === 0){
+                alert('erreur');
+            }else{
+                alert('Bienvenue');
+            }
+
+
+        })//--Fin de l'evenement
+
+
+
+
+
+
+
+    })//Fin jQuery
+    
+    
+    </script>
 
 </body>
 </html>
