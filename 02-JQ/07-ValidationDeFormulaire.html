@@ -146,7 +146,7 @@
             }
 
             // -- Validation du champ "emai"
-            if (!validateEmail === (email.val())) {
+            if (!validateEmail(email.val())) {
                 email.addClass('is-invalid');
             } else {
                 nom.addClass('is-valid');

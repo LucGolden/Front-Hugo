@@ -92,7 +92,7 @@
 
            <div class="row" style="background: #000;">
                <div class="col-md-6 mx-auto">
-                    <form id="contacts-nous">
+                    <form novalidate id="contacts-nous">
                             <div class="form-group">
                                 <label for=""></label>
                               <input type="text" class="form-control" id="nomEtprenom" placeholder="Nom et Prenom">
@@ -159,28 +159,28 @@
             e.preventDefault();
 
             //--recuperation des valeurs INPUT
-            const nomEtprenom = $('nomEtprenom');
-            const email = $('email');
-            const tel = $('tel');
-            const sujet = $('sujet');
-            const message = $('message');
+            const nomEtprenom = $('#nomEtprenom').val();
+            const email = $('#email').val();
+            const tel = $('#tel').val();
+            const sujet = $('#sujet').val();
+            const message = $('#message').val();
             // console.log('nomEtprenom');
 
-            if(nomEtprenom.val() === 0){
-                alert('erreur');
-                console.log(nomEtprenom.val().length);
+             $('#contacts-nous .alert-danger').remove();
+
+            if(nomEtprenom === '' || !validateEmail(email) || !validateTel(tel) || tel === '' || sujet === '' || message === ''){
+                $(this).prepend(`
+                <div class="alert alert-danger">Nous n'avons pas été en mésure de valider votre contact </div>
+                
+                `);
             }else{
-                alert('Bienvenue');
+                $(this).replaceWith(`
+            <div class="alert alert-success"> Votre contact à bien été transmis ! Nous vous répondrons dans les meilleurs delais. </div>
+            `);
             }
 
 
         })//--Fin de l'evenement
-
-
-
-
-
-
 
     })//Fin jQuery
     
