@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Révision jQuery</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+
+</head>
+<body>
+    <section id="erreur" >
+
+    </section>
+    <div class="container-fluid">
+        <h1 class="text-center">Révision JS - jQuery - Bootstrap</h1>
+        <p class="text-center">validation formulaire</p>
+<form novalidate id="contacts" class="form-horizontal">
+  
+    <div class="form-group row">
+        <label for="text" class="col-sm-2 col-form-label">Nom</label>
+        <div class="col-md-8">
+            <input type="name" class="form-control" id="nom" placeholder="Nom">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="name" class="col-sm-2 col-form-label">Prenom</label>
+        <div class="col-md-8">
+            <input type="name" class="form-control" id="prenom" placeholder="Prenom">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="name" class="col-sm-2 col-form-label">Adresse</label>
+        <div class="col-md-8">
+            <input type="adresse" class="form-control" id="adresse" placeholder="25 Place le Vau">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="email" class="col-sm-2 col-form-label">email</label>
+        <div class="col-md-8">
+            <input type="ameil" class="form-control" id="email" placeholder="xxxxx@xx.xx">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="tel" class="col-sm-2 col-form-label">Téléphone</label>
+        <div class="col-md-8">
+            <input type="tel" class="form-control" id="tel" placeholder="xxxx xx xx xx">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="text" class="col-sm-2 col-form-label">Pays</label>
+    <select class="custom-select col-md-8" id="pays" aria-label="Example select with button addon">
+        <option value="pays">Pays</option>
+        <option value="2">Espagne</option>
+        <option value="3">Haïti</option>
+        <option value="3">Belgique</option>
+    </select>
+    </div>
+    <div class="form-group">
+    <button type="submit" value="submit" class="btn btn-primary btn-lg btn-block">ENVOYER</button>
+</div>
+</form>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+<script>
+    $(function(){
+
+        //--pour la validation de l'email 
+        function validateEmail(email) {
+            var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+        }
+
+        //--pour la validation de l'email 
+        var validateTel = tel => {
+            var telReg = new RegExp("(0|\\+33|0033)[1-9][0-9]{8}");
+            return telReg.test(tel);
+        }
+
+
+        
+
+        $('#contacts').submit(function(e){
+            //Stopper la redirection
+            e.preventDefault();
+            
+
+            $('#contacts .alert-danger').remove();
+
+            //stockage des valeurs "input"
+            const nom = $('#nom').val();
+            const prenom = $('#prenom').val();
+            const adresse = $('#adresse').val();
+            const email = $('#email').val();
+            const tel = $('#tel').val();
+            const pays = $("#pays").val();
+
+           
+
+            
+            //validation des champs "input"
+            if(nom === '' || prenom === '' || adresse === '' || !validateEmail(email) || !validateTel(tel) || pays === 'pays'){
+                // Message d'erreur 
+                $(this).prepend(
+                    `
+                    <div class="alert alert-danger text-center">Nous n'avons pas été en mésure de valider votre contact </div>
+                    `
+                )}
+                
+            else{
+            //   Message de validation
+              $(this).replaceWith(
+                  `
+                  <div class="alert alert-success text-center">Bienvenue! Votre contact à bien été transmis ! Nous vous répondrons dans les meilleurs delais.</div>
+                  `  
+              )
+           console.log(pays)
+        }
+        })//Evenement
+
+    })//--jQuery
+
+</script>
+
+</body>
+</html>

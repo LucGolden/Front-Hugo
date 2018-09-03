@@ -11,13 +11,13 @@
          <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
             crossorigin="anonymous">
-            <link rel="stylesheet" href="assets/css/ap.css">
+            
 </head>
 <body>
-    <div class="contaire-fluid" >
+    <div class="contenair" >
        
-            <nav class="navbar navbar-dark bg-dark">
-                    <nav class="navbar navbar-dark bg-dark mx-auto">
+            <nav class="navbar " style="background-color:#000;">
+                    <nav class="navbar  mx-auto" style="">
                     <a class="navbar-brand" href="#">
                       <img src="assets/img/logo.png" width="30" height="30" alt="">
                     </a>
@@ -33,7 +33,7 @@
                     </nav>
                   </nav>
                   <div class="row" style="background: rgb(27, 27, 27);">
-                      <div class="row" style="position: relative; left: 440px;">
+                      <div class="row" style="position: relative; left: 36%;">
                         <img src="assets/img/menu/iPhone7.png" alt="..." class="img">
 
                         <img src="assets/img/menu/iPhone6s.png" alt="..." class="img">
@@ -49,7 +49,7 @@
                   </div>
 
 
-                  <div class="row" style=" color: aliceblue">
+                  <div class="row" style=" color: aliceblue; background-color: #000000;">
                       <div class="col" style="text-align: center">
                       <p><h2>iPhone</h2> 
                       
@@ -90,7 +90,7 @@
                         </div>        
             </div>
 
-           <div class="row">
+           <div class="row" style="background: #000;">
                <div class="col-md-6 mx-auto">
                     <form id="contacts-nous">
                             <div class="form-group">
@@ -121,7 +121,7 @@
                                    </div>
 
 
-                                   <div class="form-group mx-auto" style="position: relative; left: 250px;">
+                                   <div class="form-group mx-auto" style="position: relative; left: 40%;">
                                         <button type="submit" class="btn btn-primary btn  mb-2">
                                             Envoyer ma demande
                                         </button>
@@ -164,10 +164,11 @@
             const tel = $('tel');
             const sujet = $('sujet');
             const message = $('message');
-            console.log('nomEtprenom');
+            // console.log('nomEtprenom');
 
             if(nomEtprenom.val() === 0){
                 alert('erreur');
+                console.log(nomEtprenom.val().length);
             }else{
                 alert('Bienvenue');
             }
