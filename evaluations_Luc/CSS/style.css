@@ -1,0 +1,62 @@
+/* ----------Style CSS perso----------- */
+
+/* Style sur le navbar BAckground, Font-family, Color */
+.navbar{
+    background:#061339; 
+    color:aliceblue;
+    font-family: 'Merienda', cursive;
+}
+
+/* Style sur la partie du 'TITRE' */
+#titre{
+    height: 175px;
+    background-image: url(../img/background.jpg);
+}
+h1{
+    text-align: center;
+    padding-top: 54px;
+    color: #FFF;
+    font-family: 'Merienda', cursive;
+}
+
+/* Style sur 'FORM' */
+h4{
+    font-family: 'Merienda', cursive;
+    color: #2F4073;
+}
+#formEtcarousel{
+    padding-top: 50px;
+}
+
+/* Style sur la Partie 4 */
+#Partie_4{
+    background-color: rgba(155, 144, 144, 0.623);
+}
+h2{
+    font-family: 'Merienda', cursive;
+    color: #2F4073;
+}
+#texte_partie4{
+    margin-left: 369px;
+}
+
+#tete_chat img{
+    background-color: #7885A5;
+    height: 200px;
+}
+
+
+/* Dans cette zone, la tête de chat devra changer de couleur (à l’aide d’une transition) au survol de l’ensemble de la zone. 
+ */
+#Partie_4:hover tete_chat img{
+    background-color: #061339;
+    -moz-transition-duration: 2s;
+}
+
+/* Style sur le footer */
+footer{
+    background-color: #061339;
+}
+footer p{
+    text-align: right;
+}
